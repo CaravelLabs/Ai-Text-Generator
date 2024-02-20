@@ -1,37 +1,85 @@
-# Alt Image Generator
+# AI Image Text Generator
 
-This project will generate relevant alt text for images using AI.
+A simple AI Image Text Generator built on [Next.js](https://nextjs.org/) and [Replicate](https://replicate.com/).
+## Environment Setup Instructions
 
-![Alt Image Generator](ogimage.png)
+### Pre requisites
 
-## How it works
+Creating a [Replicate](https://replicate.com/signin?next=%2F) account as we would require keys to Replicate API.
 
-It uses an ML modal from Salesforce called [BLIP](https://github.com/salesforce/BLIP) on [Replicate](https://replicate.com/) to generate relevant alt text for images. You can feed the Next.js API route an image as a query param and it will return a one sentence description of that image.
+### Getting Started Steps
 
-## Clone and Deploy
+- Install dependencies from the root folder - `npm install`
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+- Rename .env.example to .env and set appropriate variables.
 
+  - REPLICATE_API_TOKEN: This is the token that you would need to create in Replicate for their API.
+
+You can obtain the api token by logging in to replicate and navigate to API tokens which will be under your profile. Copy the value to use.
+
+- Start the project - `npm run dev`
+
+<br />
+<br />
+
+## Technical Documentation
+
+### Tech Stack
+
+| Name | Description |
+| :--- | ---: |
+| [Next.js](https://nextjs.org/) | React framework |
+| [Replicate](https://replicate.com/) | Run and fine-tune open-source models. Deploy custom models at scale. All with one line of code. |
+| [React](https://react.dev/) | The library for web and native user interfaces |
+
+<br />
+
+### Folder Structure
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/alt-tag-generator
+.
+📦web
+ ┣ 📂pages
+ ┃ ┣ 📂api
+ ┃ ┃ ┗ 📜generate.ts
+ ┃ ┣ 📜generate-image-text.tsx
+ ┃ ┣ 📜index.tsx
+ ┃ ┗ 📜_app.tsx
+ ┣ 📂public
+ ┃ ┣ 📜favicon.ico
+ ┃ ┗ 📜vercel.svg
+ ┣ 📂styles
+ ┃ ┣ 📜globals.css
+ ┃ ┗ 📜Home.module.css
+ ┣ 📜.env.example
+ ┣ 📜.eslintrc.json
+ ┣ 📜.gitignore
+ ┣ 📜next-env.d.ts
+ ┣ 📜next.config.js
+ ┣ 📜ogimage.png
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┣ 📜pnpm-lock.yaml
+ ┣ 📜tsconfig.json
+ ┣ 📜turbo.json
+ ┗ 📜vercel.json
 ```
 
-After cloning the repo, go to [Replicate](https://replicate.com/) to make an account and put your API key in a file called `.env.local`.
+<br />
 
-Then, run the application in the command line and it will be available at `http://localhost:3000`.
+### High Level Technical Architecture
 
-```bash
-pnpm dev
-```
+![High Level Technical Design](https://ambitustemplateassets.blob.core.windows.net/assets/AI%20Image%20Text%20Generator.png)
 
-To use the API route, go to the link below in your browser or run a curl command in your terminal to get a sample result. Feel free to replace the dub.sh link with a link to any image.
+<br />
 
-```bash
-curl http://localhost:3000/api/generate?imageUrl=https://dub.sh/confpic
-```
+### Cost to host in Azure
 
-## One-Click Deploy
+Official estimate from Azure Pricing Calculator - [Azure Pricing Calculator](https://azure.com/e/bbec79326663486ebfb3c76d30b1a9fc)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+| Service Category | Service Type | Description | Estimated Monthly Cost | Estimated Upfront Cost |
+| :---: | :---: | :---: | :---: | :---: |
+| Compute | Azure App Service | *Basic Tier; 1 B1 (1 Core(s), 1.75 GB RAM, 10 GB Storage) x 730 Hours; Linux OS; 0 SNI SSL Connections; 0 IP SSL Connections; 0 Custom Domains; 0 Standard SLL Certificates; 0 Wildcard SSL Certificates* | $12.41 | $0 |
+| Developer Tools | Azure DevOps | *Basic Plan; 5 User(s)* | $0 | $0 |
+| Total | | | $12.41 | $0 |
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/alt-tag-generator&env=REPLICATE_API_TOKEN&project-name=alt-tag-generation&repo-name=alt-tag-generation)
+***Disclaimer: The above cost is an estimate and may vary based on the actual usage. Caravel Labs or Microsoft is not responsible for additional costs incurred.***
