@@ -70,7 +70,7 @@ You can obtain the api token by logging in to replicate and navigate to API toke
 
 ![Image Description](https://ambitustemplateassets.blob.core.windows.net/assets/AI%20Image%20Text%20Generator%20(2).png)
 
-
+<br/>
 <br />
 
 ### Cost to host in Azure
@@ -82,5 +82,7 @@ Official estimate from Azure Pricing Calculator - [Azure Pricing Calculator](htt
 | Compute | Azure App Service | *Basic Tier; 1 B1 (1 Core(s), 1.75 GB RAM, 10 GB Storage) x 730 Hours; Linux OS; 0 SNI SSL Connections; 0 IP SSL Connections; 0 Custom Domains; 0 Standard SLL Certificates; 0 Wildcard SSL Certificates* | $12.41 | $0 |
 | Developer Tools | Azure DevOps | *Basic Plan; 5 User(s)* | $0 | $0 |
 | Total | | | $12.41 | $0 |
+
+<br/>
 
 ***Disclaimer: The above cost is an estimate and may vary based on the actual usage. Caravel Labs or Microsoft is not responsible for additional costs incurred.***
