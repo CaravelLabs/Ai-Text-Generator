@@ -68,7 +68,7 @@ You can obtain the api token by logging in to replicate and navigate to API toke
 
 ### High Level Technical Architecture
 
-![High Level Technical Design](https://ambitustemplateassets.blob.core.windows.net/assets/AI%20Image%20Text%20Generator%20(2).png)
+<img src="https://ambitustemplateassets.blob.core.windows.net/assets/AI%20Image%20Text%20Generator.png" alt="Image Description" style="max-width:100%;">
 
 <br />
 
